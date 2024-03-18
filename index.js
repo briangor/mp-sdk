@@ -1,8 +1,7 @@
 import { setupSdk } from '@matterport/sdk';
 
 const main = async () => {
-    // Initialize SDK here
-    const mpSdk = await setupSdk('sdk');
+    const mpSdk = await setupSdk(process.env.SDK_KEY || 'SDK_KEY');
     await mpSdk.App.state.waitUntil(state => state.phase === mpSdk.App.Phase.PLAYING)
   mpSdk.Camera.rotate(35, 0)
   }
