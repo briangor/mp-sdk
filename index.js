@@ -6,3 +6,4 @@ const main = async () => {
   mpSdk.Camera.rotate(35, 0)
   }
 main().catch(err => console.error('Error:', err));
+// todo: check node access to process variables
