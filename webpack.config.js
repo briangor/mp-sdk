@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: './index.js',
@@ -7,5 +8,5 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'index_bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin(), new Dotenv()],
 };
